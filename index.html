@@ -4,13 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scaleble=no" >
     <link rel="shortcut icon" href="./images/hangman.png" type="image/x-icon">
+    <link rel="stylesheet" href="./main.css">
     <title>Hangman</title>
 </head>
 
 <body>
+    <div class="mainContainer">
+        <div class="gameContainer">
+            <div class="hangman gameboxcss">
+                <img src="./images/man1.png" alt="hangman">
+            </div>
+            <div class="game gameboxcss">
+                <div class="gameHeader">
+                   <h1>HANGMAN <img src="./images/hangman.png" alt=""></h1>
+                </div>
+                <div class="point box">
+                    100
+                </div>
 
+                <div class="guess box">
+                    <div class="word">
+                        <input id="mysteryWord" type="text" value="" disabled/>
+                    </div>
+                    <div class="wordButtons">
+                        <button class="gameWordButtons">A</button>
+                        <button class="gameWordButtons">B</button>
+                        <button class="gameWordButtons">C</button>
+                        <button class="gameWordButtons">D</button>
+                        <button class="gameWordButtons">E</button>
+                        <button class="gameWordButtons">F</button>
+                        <button class="gameWordButtons">G</button>
+                        <button class="gameWordButtons">H</button>
+                        <button class="gameWordButtons">I</button>
+                        <button class="gameWordButtons">J</button>
+                        <button class="gameWordButtons">K</button>
+                        <button class="gameWordButtons">L</button>
+                        <button class="gameWordButtons">M</button>
+                        <button class="gameWordButtons">N</button>
+                        <button class="gameWordButtons">O</button>
+                        <button class="gameWordButtons">P</button>
+                        <button class="gameWordButtons">Q</button>
+                        <button class="gameWordButtons">R</button>
+                        <button class="gameWordButtons">S</button>
+                        <button class="gameWordButtons">T</button>
+                        <button class="gameWordButtons">U</button>
+                        <button class="gameWordButtons">V</button>
+                        <button class="gameWordButtons">W</button>
+                        <button class="gameWordButtons">X</button>
+                        <button class="gameWordButtons">Y</button>
+                        <button class="gameWordButtons">Z</button>
+                    </div>
+                </div>
+
+                <div class="buttons box">
+                    <div class="playBtn btns" onclick="play() ">
+                        <input type="button" id="playbtn" value="Play">
+                    </div>
+                    <div class="resetBtn btns">
+                        <input onclick="window.location.reload();" type="button" value="Reset">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
