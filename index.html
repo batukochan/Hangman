@@ -14,53 +14,53 @@
     <div class="mainContainer">
         <div class="gameContainer">
             <div class="hangman gameboxcss">
-                <img src="./images/man1.png" alt="hangman">
+                <img id="hangmanPosition" src="./images/man1.png" alt="hangman">
             </div>
             <div class="game gameboxcss">
                 <div class="gameHeader">
                    <h1>HANGMAN <img src="./images/hangman.png" alt=""></h1>
                 </div>
-                <div class="point box">
+                <div class="point box" id="pointBox">
                     100
                 </div>
 
                 <div class="guess box">
-                    <div class="word">
-                        <input id="mysteryWord" type="text" value="" disabled/>
+                    <div id="divPanel" class="word">
+                        
                     </div>
                     <div class="wordButtons">
-                        <button class="gameWordButtons">A</button>
-                        <button class="gameWordButtons">B</button>
-                        <button class="gameWordButtons">C</button>
-                        <button class="gameWordButtons">D</button>
-                        <button class="gameWordButtons">E</button>
-                        <button class="gameWordButtons">F</button>
-                        <button class="gameWordButtons">G</button>
-                        <button class="gameWordButtons">H</button>
-                        <button class="gameWordButtons">I</button>
-                        <button class="gameWordButtons">J</button>
-                        <button class="gameWordButtons">K</button>
-                        <button class="gameWordButtons">L</button>
-                        <button class="gameWordButtons">M</button>
-                        <button class="gameWordButtons">N</button>
-                        <button class="gameWordButtons">O</button>
-                        <button class="gameWordButtons">P</button>
-                        <button class="gameWordButtons">Q</button>
-                        <button class="gameWordButtons">R</button>
-                        <button class="gameWordButtons">S</button>
-                        <button class="gameWordButtons">T</button>
-                        <button class="gameWordButtons">U</button>
-                        <button class="gameWordButtons">V</button>
-                        <button class="gameWordButtons">W</button>
-                        <button class="gameWordButtons">X</button>
-                        <button class="gameWordButtons">Y</button>
-                        <button class="gameWordButtons">Z</button>
+                        <button class="gameWordButtons" value="A">A</button>
+                        <button class="gameWordButtons" value="B">B</button>
+                        <button class="gameWordButtons" value="C">C</button>
+                        <button class="gameWordButtons" value="D">D</button>
+                        <button class="gameWordButtons" value="E">E</button>
+                        <button class="gameWordButtons" value="F">F</button>
+                        <button class="gameWordButtons" value="G">G</button>
+                        <button class="gameWordButtons" value="H">H</button>
+                        <button class="gameWordButtons" value="I">I</button>
+                        <button class="gameWordButtons" value="J">J</button>
+                        <button class="gameWordButtons" value="K">K</button>
+                        <button class="gameWordButtons" value="L">L</button>
+                        <button class="gameWordButtons" value="M">M</button>
+                        <button class="gameWordButtons" value="N">N</button>
+                        <button class="gameWordButtons" value="O">O</button>
+                        <button class="gameWordButtons" value="P">P</button>
+                        <button class="gameWordButtons" value="Q">Q</button>
+                        <button class="gameWordButtons" value="R">R</button>
+                        <button class="gameWordButtons" value="S">S</button>
+                        <button class="gameWordButtons" value="T">T</button>
+                        <button class="gameWordButtons" value="U">U</button>
+                        <button class="gameWordButtons" value="V">V</button>
+                        <button class="gameWordButtons" value="W">W</button>
+                        <button class="gameWordButtons" value="X">X</button>
+                        <button class="gameWordButtons" value="Y">Y</button>
+                        <button class="gameWordButtons" value="Z">Z</button>
                     </div>
                 </div>
 
                 <div class="buttons box">
-                    <div class="playBtn btns" onclick="play() ">
-                        <input type="button" id="playbtn" value="Play">
+                    <div id="plyBtn" class="playBtn btns" onclick="play()" >
+                        <input type="button" id="playbtn" value="Play" >
                     </div>
                     <div class="resetBtn btns">
                         <input onclick="window.location.reload();" type="button" value="Reset">
