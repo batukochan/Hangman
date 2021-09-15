@@ -23,7 +23,6 @@ let wordCharCount = showWordStr.length; // Karakter sayısı
 function play() {
     if (words.length != 0) {
         words.splice(randomNumber, 1); // Seçilen kelimeler listeden çıkartıldı.
-        
         // kelimeyi döngüye sokarak içerisinde bulunan karakter sayısı kadar "_" ekrana yazdırılmalıdır.. Döngü sayısını seçilen karakterin kelime sayısı olarak kullanabiliriz
         for (index = 0; index < wordCharCount; index++) { panelDiv(); }
         // Dönüştürülen kelime bir array olduğu için string ifadeye döndürmeliyiz. String ifadeye dönüştürülen kelime, HTML'de oluşturduğumuz text kısmına yazılmalıdır. Bu nedenle HTML kısmında bulunan ve işlem yapılacak olan elemente id ataması yapılıp, elementin value="" değerine string ifadeye dönüştürülen kelimenin değer ataması yapılmalıdır.
@@ -50,7 +49,7 @@ for (i = 0; i < myButtons.length; i++) {
     myButtons[i].addEventListener("click", wordClick);
 } // button elementine sahip kutuların, click anında wordClick fonksiyonunu çalıştırması için kullanıldı.
 
-
+let trueCounter = 0;
 let mistakeCounter = 0; // hataların sayıldığı değişkendir.
 let isHanged = false; //Bu değişken sayesinde, adamın asılma durumu kontrol edilir.
 /**
@@ -66,7 +65,7 @@ function wordClick(event) {
     let charIndex2 = showWordStr.indexOf(char, charIndex+1); // Harfin indeksi
     let selectedDiv = document.getElementsByClassName("wordPanel"); // wordPanel adına sahip div elementleri array olarak alındı.
 
-    if (charIndex == -1) { //eğer harf yoksa
+    if (charIndex == -1 ) { //eğer harf yoksa
         mistakeCounter += 1;
         settings.startPoint -= settings.fault;
         pointer();
@@ -75,10 +74,14 @@ function wordClick(event) {
             isHanged = true;
         }
     } else { // harf varsa
+        trueCounter += 1;
         settings.startPoint += settings.successPoint;
         selectedDiv[charIndex].innerHTML = char;
         if (charIndex2 >= 0){
         selectedDiv[charIndex2].innerHTML = char;}
+        if (trueCounter == showWordStr.length){
+        playbtn.removeAttribute("disabled", true);
+        }
         pointer();
         }
      end();
@@ -99,6 +102,7 @@ function wordClick(event) {
             myButtons[i].setAttribute("disabled", true);
         }
     }
+
 
     /**
      * Oyunun bittiği durumlarda kullanılır.
